@@ -1,9 +1,9 @@
 require 'rake'
-# require 'rubygems'
+require 'rubygems'
 require 'rake/gempackagetask'
-require 'spec/rake/spectask'
+# require 'spec/rake/spectask'
 
-require 'lib/zucker' # version
+require_relative 'lib/zucker' # version
 
 desc 'Build documentation'
 task 'doc' do
@@ -11,9 +11,9 @@ task 'doc' do
   ruby File.join(zucker_path, 'doc/zucker_doc.rb'), zucker_path
 end
 
-Spec::Rake::SpecTask.new('spec') do |t|
-  t.spec_files = FileList['spec/*.rb']
-end
+# Spec::Rake::SpecTask.new('spec') do |t|
+#   t.spec_files = FileList['spec/*.rb']
+# end
 
 # gem
 PKG_FILES = FileList[ '[a-zA-Z]*', 'lib/**/*' ]
