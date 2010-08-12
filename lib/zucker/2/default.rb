@@ -13,6 +13,7 @@ iterate
 ivars
 kernel
 mcopy
+module
 regexp2proc
 sandbox
 square_brackets_for
